@@ -37,6 +37,65 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// Logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// NAV
+let navLinks = document.querySelectorAll('nav a');
+navLinks[0].textContent = siteContent.nav['nav-item-1'];
+navLinks[1].textContent = siteContent.nav['nav-item-2'];
+navLinks[2].textContent = siteContent.nav['nav-item-3'];
+navLinks[3].textContent = siteContent.nav['nav-item-4'];
+navLinks[4].textContent = siteContent.nav['nav-item-5'];
+navLinks[5].textContent = siteContent.nav['nav-item-6'];
+
+let navBar = document.querySelector('.container nav');
+const nav1 = document.createElement('a');
+nav1.textContent = 'Home';
+navBar.prepend(nav1);
+const nav2 = document.createElement('a');
+nav2.textContent = 'Donate'
+navBar.append(nav2);
+
+
+// CTA
+let codeImg = document.getElementById('cta-img');
+codeImg.setAttribute('src', siteContent.cta['img-src']);
+
+let ctaH1 = document.querySelector('.cta-text h1');
+ctaH1.textContent = siteContent.cta['h1'];
+
+let ctaButton = document.querySelector('.cta-text button');
+ctaButton.textContent = siteContent.cta['button'];
+
+// Main Content
+let mainH4 = document.querySelectorAll('.main-content h4');
+mainH4[0].textContent = siteContent['main-content']['features-h4'];
+mainH4[1].textContent = siteContent['main-content']['about-h4'];
+mainH4[2].textContent = siteContent['main-content']['services-h4'];
+mainH4[3].textContent = siteContent['main-content']['product-h4'];
+mainH4[4].textContent = siteContent['main-content']['vision-h4'];
+
+let mainP = document.querySelectorAll('.main-content p');
+mainP[0].textContent = siteContent['main-content']['features-content'];
+mainP[1].textContent = siteContent['main-content']['about-content'];
+mainP[2].textContent = siteContent['main-content']['services-content'];
+mainP[3].textContent = siteContent['main-content']['product-content'];
+mainP[4].textContent = siteContent['main-content']['vision-content'];
+
+let bannerImg = document.querySelector('.middle-img');
+bannerImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+// Contact
+let contactHead = document.querySelector('.contact h4');
+contactHead.textContent = siteContent['contact']['contact-h4'];
+
+let contactInfo = document.querySelectorAll('.contact p');
+contactInfo[0].textContent = siteContent['contact']['address'];
+contactInfo[1].textContent = siteContent['contact']['email'];
+contactInfo[2].textContent = siteContent['contact']['phone'];
+
+//Footer
+let footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright'];
