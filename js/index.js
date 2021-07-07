@@ -53,11 +53,16 @@ navLinks[5].textContent = siteContent.nav['nav-item-6'];
 let navBar = document.querySelector('.container nav');
 const nav1 = document.createElement('a');
 nav1.textContent = 'Home';
+
 navBar.prepend(nav1);
 const nav2 = document.createElement('a');
 nav2.textContent = 'Donate'
 navBar.append(nav2);
 
+let navLinksArr = Array.from(navLinks);
+navLinksArr.push(nav1, nav2)
+
+navLinksArr.forEach(i => i.style.color = 'green');
 
 // CTA
 let codeImg = document.getElementById('cta-img');
